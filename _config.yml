@@ -1,0 +1,22 @@
+# Site
+title: ZhiYuan 的博客
+subtitle: 保持热爱，持续进步
+description: 一个大学生程序员的个人博客
+keywords: 编程, 博客, 大学生
+author: ZhiYuan
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+url: https://1zzhiyuan.github.io
+permalink: :year/:month/:day/:title/
+
+source_dir: source
+public_dir: public
+
+new_post_name: :title.md
+default_layout: post
+
+theme: fluid
+
+deploy:
+  type: ''
