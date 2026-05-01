@@ -1,0 +1,170 @@
+/* ===== 自定义美化 ===== */
+/* 修改以下颜色值可自定义更多外观 */
+
+/* ---- 可自定义颜色 ---- */
+:root {
+  --card-bg: #fff;              /* 卡片背景色（亮色模式） */
+  --card-border: rgba(0,0,0,.06); /* 卡片边框色 */
+  --body-bg: #f5f5f5;           /* 页面背景色 */
+  --footer-bg: #49b1f5;         /* 页脚背景色 */
+  --tag-bg: #49b1f5;            /* 标签背景色 */
+  --tag-color: #fff;            /* 标签文字色 */
+  --category-bg: #49b1f5;       /* 分类背景色 */
+  --category-color: #fff;       /* 分类文字色 */
+}
+
+/* 暗色模式颜色 */
+[data-theme="dark"] {
+  --card-bg: #1e1e1e;
+  --card-border: rgba(255,255,255,.06);
+  --body-bg: #121212;
+  --footer-bg: #1e1e1e;
+}
+
+/* ---- 应用颜色 ---- */
+
+/* 页面背景 */
+body {
+  background: var(--body-bg);
+  animation: fadeIn 0.8s ease;
+}
+
+/* 卡片 */
+.card-widget,
+#recent-posts > .recent-post-item,
+#page,
+#post,
+#archive,
+#tag,
+#category {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+}
+
+/* 文章卡片悬浮效果 */
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 侧边栏卡片悬浮效果 */
+.card-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* 页脚背景 */
+#footer {
+  background: var(--footer-bg) !important;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #49b1f5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(73, 177, 245, 0.1);
+  border-radius: 4px;
+}
+
+/* 选中文字颜色 */
+::selection {
+  background: #00c4b6;
+  color: #fff;
+}
+
+/* 页面加载淡入效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 文章图片圆角 */
+#article-container img {
+  border-radius: 8px;
+}
+
+/* 代码块美化 */
+#article-container code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* 标签云动画 */
+.tag-cloud-tags a {
+  transition: all 0.3s ease !important;
+}
+.tag-cloud-tags a:hover {
+  transform: scale(1.1) !important;
+}
+
+/* 底部回到顶部按钮 */
+#go-up {
+  background: #49b1f5 !important;
+}
+
+/* 禁止公告喇叭图标抖动 */
+.announcement .item-headline i,
+.announcement i.fa-bullhorn,
+.card-announcement i.fa-bullhorn,
+.item-headline i {
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* 侧边栏标签 */
+.card-tag-cloud a {
+  background: var(--tag-bg) !important;
+  color: var(--tag-color) !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  margin: 2px !important;
+  opacity: 0.85 !important;
+}
+.card-tag-cloud a:hover {
+  opacity: 1 !important;
+}
+
+/* ===== 禁止头像旋转 ===== */
+.avatar-img img,
+.author-avatar img,
+.card-avatar img {
+  transform: rotate(0deg) !important;
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  -o-transform: rotate(0deg) !important;
+  -ms-transform: rotate(0deg) !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+}
+.avatar-img img:hover,
+.author-avatar img:hover,
+.card-avatar img:hover {
+  transform: rotate(0deg) !important;
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  -o-transform: rotate(0deg) !important;
+  -ms-transform: rotate(0deg) !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* ===== 禁止公告喇叭抖动 ===== */
+#aside-content .card-more-btn:hover {
+  animation: none !important;
+  -webkit-animation: none !important;
+}

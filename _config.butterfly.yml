@@ -1,0 +1,499 @@
+# ========== 导航栏 ==========
+nav:
+  logo:                                     # 导航栏左侧不显示头像
+  display_title: true
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-heart
+  友链: /link/ || fas fa-link
+  留言板: /messages/ || fas fa-comment-dots
+
+# ========== 代码 ==========
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+code_word_wrap: true
+
+# ========== 社交 ==========
+social:
+  fab fa-github: https://github.com/1zZhiYuan || GitHub || '#24292e'
+  fas fa-envelope: mailto:2363497064@qq.com || Email || '#4a7dbe'
+  fab fa-bilibili: https://space.bilibili.com/ || Bilibili || '#00a1d6'
+  fab fa-twitter: https://twitter.com/ || Twitter || '#1da1f2'
+  fab fa-weixin: https://github.com/1zZhiYuan || 微信 || '#07c160'
+
+# ========== 图片 ==========
+favicon: /img/touxiang.jpg
+avatar:
+  img: /img/avatar.png
+  effect: false
+disable_top_img: false
+index_img: /img/default.jpg
+default_top_img: /img/default.jpg
+archive_img: /img/archive.jpg
+tag_img: /img/tag.jpg
+category_img: /img/category.jpg
+
+# ========== 文章封面 ==========
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+    - https://source.unsplash.com/random/800x500?programming
+    - https://source.unsplash.com/random/800x500?code
+    - https://source.unsplash.com/random/800x500?technology
+    - https://source.unsplash.com/random/800x500?developer
+    - https://source.unsplash.com/random/800x500?computer
+    - https://source.unsplash.com/random/800x500?coding
+
+# ========== 错误图片 ==========
+error_img:
+  flink: /img/error.jpg
+  post_page: /img/error.jpg
+
+# ========== 404 ==========
+error_404:
+  enable: true
+  subtitle: '页面不小心走丢了...'
+  background: https://source.unsplash.com/random/1600x900?404
+
+# ========== 文章元数据 ==========
+post_meta:
+  page:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# ========== 首页文章内容 ==========
+index_post_content:
+  method: 2
+  length: 300
+
+# ========== 文章置顶 ==========
+sticky:
+  enable: true
+  number: 1
+
+# ========== 复制版权 ==========
+copy:
+  enable: true
+  copyright:
+    enable: true
+    limit_count: 50
+
+# ========== 目录 ==========
+toc:
+  post: true
+  page: true
+  number: true
+  expand: true
+  style_simple: false
+  scroll_percent: true
+
+# ========== 版权声明 ==========
+post_copyright:
+  enable: true
+  decode: false
+  author_href: https://github.com/1zZhiYuan
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# ========== 相关文章 ==========
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+# ========== 文章分页 ==========
+post_pagination: 1
+
+# ========== 过期提醒 ==========
+noticeOutdate:
+  enable: true
+  style: flat
+  limit_day: 365
+  position: top
+  message_prev: 距离上次更新
+  message_next: 天，内容可能已过时。
+
+# ========== 页脚 ==========
+footer:
+  owner:
+    enable: true
+    since: 2023
+  custom_text: '<i class="fas fa-heart" style="color: #ff6b6b"></i> 保持热爱，持续进步 | <i class="fas fa-code-branch"></i> <a href="https://github.com/1zZhiYuan/1zZhiYuan.github.io" target="_blank">GitHub</a>'
+  copyright: true
+
+# ========== 侧边栏 ==========
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 一名热爱编程的大学生
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 关注我
+      link: https://github.com/1zZhiYuan
+  card_announcement:
+    enable: true
+    content: 欢迎来到我的个人博客！🌟 这里记录我的编程学习与项目实践。目前共有 <b><span id="post-count">...</span></b> 篇文章，持续更新中～
+  card_recent_post:
+    enable: true
+    limit: 6
+    sort: date
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+  card_tags:
+    enable: true
+    limit: 40
+    color: true
+    orderby: random
+    order: 1
+  card_archives:
+    enable: true
+    type: monthly
+    format: YYYY年MM月
+    order: -1
+    limit: 8
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    site_runtime:
+      enable: true
+      year: 2023
+      month: 5
+      day: 25
+      hour: 22
+      minute: 0
+
+# ========== 访问统计 ==========
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# ========== 网站运行时间 ==========
+runtimeshow:
+  enable: true
+  publish_date: 2023/5/25 22:00:00
+
+# ========== 暗色模式 ==========
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 1
+
+# ========== 侧边栏按钮排序 ==========
+rightside_scroll_percent: true
+rightside_item_order:
+  enable: false
+  hide:
+  show:
+
+# ========== 搜索 ==========
+local_search:
+  enable: true
+  preload: true
+  top_n_per_article: 3
+  unescape: true
+
+# ========== 分享 ==========
+sharejs:
+  enable: true
+  sites: facebook,twitter,wechat,weibo,qq
+
+# ========== 评论系统（Giscus） ==========
+comments:
+  use: giscus
+  text: true
+  lazyload: false
+  count: true
+  card_post_count: true
+
+giscus:
+  repo: 1zZhiYuan/1zZhiYuan.github.io
+  repo_id: R_kgDOJlXSig
+  category_id: DIC_kwDOJlXSis4CmCQv
+  theme:
+    light: light
+    dark: dark
+  option:
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 1
+  input-position: top
+  lang: zh-CN
+
+# ========== 特效 ==========
+activate_power_mode:
+  enable: false
+canvas_ribbon:
+  enable: false
+canvas_fluttering_ribbon:
+  enable: false
+canvas_nest:
+  enable: true
+  color: '0,100,255'
+  opacity: 0.5
+  zIndex: -1
+  count: 100
+  mobile: false
+fireworks:
+  enable: true
+  zIndex: 9999
+  mobile: false
+click_heart:
+  enable: true
+  mobile: false
+clickShowText:
+  enable: true
+  text:
+    - 富强
+    - 民主
+    - 文明
+    - 和谐
+    - 自由
+    - 平等
+    - 公正
+    - 法治
+    - 爱国
+    - 敬业
+    - 诚信
+    - 友善
+  fontSize: 18px
+  random: false
+  mobile: false
+
+display_mode: light
+
+# ========== 首页副标题打字效果 ==========
+subtitle:
+  enable: true
+  effect: true
+  source: false
+  sub:
+    - 保持热爱，持续进步 🚀
+    - 一名热爱编程的大学生 💻
+    - 用代码改变世界 🌍
+    - 学无止境，行以致远 📚
+    - 行而不辍，未来可期 ✨
+    - Hello World! 👋
+
+# ========== 加载动画 ==========
+preloader:
+  enable: true
+  source: 1
+
+# ========== 字数统计 ==========
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ========== 图片查看 ==========
+medium_zoom: false
+fancybox: true
+
+# ========== 标签外挂 ==========
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+# ========== Mermaid 图表 ==========
+mermaid:
+  enable: true
+  theme: default
+
+# ========== 数学公式 ==========
+mathjax:
+  enable: false
+  per_page: false
+katex:
+  enable: false
+  per_page: false
+
+# ========== Snackbar 弹窗 ==========
+snackbar:
+  enable: true
+  position: bottom-left
+  bg_light: '#49b1f5'
+  bg_dark: '#1f1f1f'
+
+# ========== Pjax ==========
+pjax:
+  enable: true
+  exclude:
+
+# ========== 图片懒加载 ==========
+lazyload:
+  enable: true
+  field: site
+  blur: false
+
+# ========== Instant Page ==========
+instantpage:
+  enable: true
+
+# ========== Pangu（中英文自动加空格） ==========
+pangu:
+  enable: true
+
+# ========== Open Graph ==========
+Open_Graph_meta:
+  enable: true
+
+# ========== 美化 ==========
+beautify:
+  enable: true
+  field: post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: '#49B1F5'
+
+# ========== 主题色（所有颜色值必须用双引号） ==========
+theme_color:
+  enable: true
+  # 主色调 - 导航栏/链接/按钮/主要元素
+  main: "#49B1F5"
+  # 分页器颜色 - 页码/翻页按钮
+  paginator: "#00c4b6"
+  # 按钮悬停色 - 鼠标悬停时按钮颜色
+  button_hover: "#FF7242"
+  # 文字选中色 - 鼠标选中文字时的背景色
+  text_selection: "#00c4b6"
+  # 链接颜色 - 普通链接文字颜色
+  link_color: "#99a9bf"
+  # 元数据颜色 - 日期/分类/标签等小字颜色
+  meta_color: "#858585"
+  # 分隔线颜色 - 文章内水平线颜色
+  hr_color: "#A4D8FA"
+  # 代码前景色 - 行内代码文字颜色
+  code_foreground: "#F47466"
+  # 代码背景色 - 行内代码背景颜色
+  code_background: "rgba(27, 31, 35, .05)"
+  # 目录颜色 - 侧边栏目录高亮色
+  toc_color: "#00c4b6"
+  # 引用边条色 - 引用块左侧竖条颜色
+  blockquote_padding_color: "#49b1f5"
+  # 引用背景色 - 引用块背景颜色
+  blockquote_background_color: "#49b1f5"
+  # 滚动条颜色
+  scrollbar_color: "#49b1f5"
+  # 浏览器主题色（亮色模式）
+  meta_theme_color_light: "ffffff"
+  # 浏览器主题色（暗色模式）
+  meta_theme_color_dark: "#0d0d0d"
+
+# ===== 预设配色方案（复制替换上方对应值即可） =====
+
+# 方案一：简约蓝（当前默认）
+# main: "#49B1F5"    paginator: "#00c4b6"    button_hover: "#FF7242"
+# text_selection: "#00c4b6"    link_color: "#99a9bf"
+
+# 方案二：活力橙
+# main: "#FF6B35"    paginator: "#F7C59F"    button_hover: "#004E89"
+# text_selection: "#FF6B35"    link_color: "#FF6B35"
+
+# 方案三：经典红
+# main: "#E74C3C"    paginator: "#C0392B"    button_hover: "#2C3E50"
+# text_selection: "#E74C3C"    link_color: "#E74C3C"
+
+# 方案四：森林绿
+# main: "#27AE60"    paginator: "#2ECC71"    button_hover: "#1A5276"
+# text_selection: "#27AE60"    link_color: "#2ECC71"
+
+# 方案五：暗夜紫
+# main: "#8E44AD"    paginator: "#9B59B6"    button_hover: "#2C3E50"
+# text_selection: "#8E44AD"    link_color: "#9B59B6"
+
+# 方案六：樱花粉
+# main: "#FF9A9E"    paginator: "#FECFEF"    button_hover: "#A8E6CF"
+# text_selection: "#FF9A9E"    link_color: "#FF9A9E"
+
+# 方案七：海洋蓝
+# main: "#006994"    paginator: "#00B4D8"    button_hover: "#FF6B6B"
+# text_selection: "#00B4D8"    link_color: "#006994"
+
+# ========== 水平分隔线 ==========
+hr_icon:
+  enable: true
+
+# ========== 网站背景 ==========
+background:
+
+# ========== 鼠标指针样式 ==========
+cursor:
+  enable: false
+
+# ========== APlayer 音乐播放器 ==========
+aplayerInject:
+  enable: true
+  per_page: true
+  # 歌单ID，可从 https://music.163.com 获取
+  # 目前使用网易云音乐精选集
+  playlist:
+    - name: 网易云音乐精选
+      server: netease
+      type: playlist
+      id: 3778678
+
+# ========== 文章打赏 ==========
+reward:
+  enable: true
+  QR_code:
+    - img: /img/wechat-qr.png
+      link:
+      text: 微信
+    - img: /img/alipay-qr.png
+      link:
+      text: 支付宝
+  animation: true
+
+# ========== 文章编辑提示 ==========
+post_edit:
+  enable: true
+  url: https://github.com/1zZhiYuan/1zZhiYuan.github.io/tree/main/source/_posts/
+
+# ========== 已读文章标记 ==========
+readmode: true
+
+# ========== 注入代码 ==========
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+    - <script src="/js/custom.js"></script>
+
+# ========== CDN ==========
+cdn:
+  prefix: https://cdn.jsdelivr.net/npm
