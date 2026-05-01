@@ -2,7 +2,7 @@
 title: 留言板
 date: 2026-05-01 22:00:00
 type: "messages"
-top_img: /img/default.png
+top_img: /img/default.jpg
 comments: true
 ---
 

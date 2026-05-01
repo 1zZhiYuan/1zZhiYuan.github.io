@@ -168,3 +168,26 @@ body {
   animation: none !important;
   -webkit-animation: none !important;
 }
+
+/* ===== 网站资讯修复 ===== */
+.card-webinfo .webinfo .webinfo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  flex-wrap: nowrap;
+}
+.card-webinfo .webinfo .webinfo-item .item-name {
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.card-webinfo .webinfo .webinfo-item .item-count {
+  text-align: right;
+  flex-shrink: 0;
+}
+.card-webinfo .webinfo #runtimeshow {
+  display: inline-block;
+  text-align: right;
+  font-size: 0.9em;
+}

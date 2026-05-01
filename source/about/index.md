@@ -2,7 +2,7 @@
 title: 关于我
 date: 2023-05-25 22:00:00
 type: "about"
-top_img: /img/default.png
+top_img: /img/default.jpg
 comments: true
 ---
 
