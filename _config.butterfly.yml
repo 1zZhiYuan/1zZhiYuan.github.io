@@ -161,27 +161,27 @@ aside:
       link: https://github.com/1zZhiYuan
   card_announcement:
     enable: true
-    content: 欢迎来到我的个人博客！🌟 这里记录我的编程学习与项目实践。目前共有 <b><span id="post-count">...</span></b> 篇文章，持续更新中～
+    content: 欢迎来到我的个人博客！这里记录编程学习与项目实践，目前共 <b><span id="post-count">...</span></b> 篇文章。
   card_recent_post:
     enable: true
-    limit: 6
+    limit: 5
     sort: date
   card_categories:
     enable: true
-    limit: 8
+    limit: 6
     expand: none
   card_tags:
     enable: true
-    limit: 40
+    limit: 20
     color: true
-    orderby: random
+    orderby: name
     order: 1
   card_archives:
     enable: true
     type: monthly
     format: YYYY年MM月
     order: -1
-    limit: 8
+    limit: 6
   card_webinfo:
     enable: true
     post_count: true
@@ -209,7 +209,7 @@ runtimeshow:
 darkmode:
   enable: true
   button: true
-  autoChangeMode: 1
+  autoChangeMode: 3
 
 # ========== 侧边栏按钮排序 ==========
 rightside_scroll_percent: true
