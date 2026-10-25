@@ -1,11 +1,11 @@
 ---
 title: 项目分享：Timer — 轻量学习计时统计工具
 date: 2026-05-02 23:00:00
-tags: [项目, Python, PyQt6, 桌面开发]
+tags: [项目, Python, PyQt5, 桌面开发]
 categories: [项目]
 cover: /img/covers/timer-project.jpg
 top_img: /img/top-home.jpg
-description: 一款使用 Python + PyQt6 开发的 Windows 桌面端专注计时与学习统计工具，纯本地运行，功能完整。
+description: 一款使用 Python + PyQt5 开发的 Windows 桌面端专注计时与学习统计工具，纯本地运行，功能完整。
 ---
 
 ## 项目简介
@@ -60,12 +60,12 @@ description: 一款使用 Python + PyQt6 开发的 Windows 桌面端专注计时
 | 技术 | 用途 |
 |------|------|
 | Python 3.7+ | 运行时 |
-| PyQt6 | 桌面 GUI 框架 |
+| PyQt5 | 桌面 GUI 框架 |
 | SQLite | 本地嵌入式数据库 |
 | psutil + pywin32 | Windows 前台进程监控 |
 | PyInstaller | 单文件 exe 打包 |
 
-Timer 使用 PyQt6 的 QPainter 自绘图表（折线图、柱状图），无 matplotlib 依赖。
+Timer 使用 PyQt5 的 QPainter 自绘图表（折线图、柱状图），无 matplotlib 依赖。
 
 ---
 
@@ -83,7 +83,7 @@ Timer 使用 PyQt6 的 QPainter 自绘图表（折线图、柱状图），无 ma
 
 {% hideToggle 点击展开 %}
 
-项目使用 PyQt6 构建，界面包含计时主页、日历视图、数据报表、番茄钟、设置面板等完整功能模块。
+项目使用 PyQt5 构建，界面包含计时主页、日历视图、数据报表、番茄钟、设置面板等完整功能模块。
 
 {% endhideToggle %}
 
