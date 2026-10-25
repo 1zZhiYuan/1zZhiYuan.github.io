@@ -1,35 +1,38 @@
-/* ===== 自定义美化 ===== */
-/* 修改以下颜色值可自定义更多外观 */
+/* ===== 自定义美化 · 晴空 Sky Blue 主题 ===== */
 
 /* ---- 可自定义颜色 ---- */
 :root {
-  --card-bg: #fff;              /* 卡片背景色（亮色模式） */
-  --card-border: rgba(0,0,0,.05); /* 卡片边框色 */
-  --body-bg: #fdf5f8;           /* 页面背景色 */
-  --footer-bg: #f28cb1;         /* 页脚背景色 */
-  --tag-bg: #f28cb1;            /* 标签背景色 */
-  --tag-color: #fff;            /* 标签文字色 */
-  --category-bg: #b892e0;       /* 分类背景色 */
-  --category-color: #fff;       /* 分类文字色 */
+  --card-bg: rgba(255, 255, 255, 0.82);   /* 卡片背景（半透明玻璃） */
+  --card-border: rgba(140, 195, 245, 0.35);
+  --body-bg: #eef6fe;                      /* 页面背景色 */
+  --body-bg-solid: #eef6fe;
+  --footer-bg: linear-gradient(180deg, #63b0f0 0%, #3a8ad8 100%);
+  --tag-bg: linear-gradient(135deg, #5ab0f2, #3f95e6);
+  --tag-color: #fff;
+  --category-bg: linear-gradient(135deg, #46c2d4, #38a3c9);
+  --category-color: #fff;
+  --accent: #4aa3ef;
+  --accent-soft: rgba(74, 163, 239, 0.12);
 }
 
 /* 暗色模式颜色 */
 [data-theme="dark"] {
-  --card-bg: #1e1e1e;
-  --card-border: rgba(255,255,255,.06);
+  --card-bg: rgba(32, 36, 44, 0.92);
+  --card-border: rgba(255, 255, 255, 0.07);
   --body-bg: #121212;
-  --footer-bg: #1e1e1e;
+  --body-bg-solid: #121212;
 }
 
-/* ---- 应用颜色 ---- */
-
-/* 页面背景 */
+/* ---- 页面背景：淡蓝渐变 + 云朵/花瓣纹理 ---- */
 body {
-  background: var(--body-bg);
+  background: linear-gradient(180deg, #e3f1fd 0%, var(--body-bg-solid) 30%, #f7fbff 100%) !important;
   animation: fadeIn 0.8s ease;
 }
+[data-theme="dark"] body {
+  background: #121212 !important;
+}
 
-/* 卡片（二次元樱花质感：大圆角 + 柔粉投影） */
+/* ---- 玻璃拟态卡片 ---- */
 .card-widget,
 #recent-posts > .recent-post-item,
 #page,
@@ -39,83 +42,112 @@ body {
 #category {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 16px;
-  box-shadow: 0 6px 22px rgba(242, 140, 177, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(64, 140, 210, 0.10);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+}
+[data-theme="dark"] .card-widget,
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] #page,
+[data-theme="dark"] #post,
+[data-theme="dark"] #archive,
+[data-theme="dark"] #tag,
+[data-theme="dark"] #category {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* 文章卡片悬浮效果 */
+/* 文章卡片悬浮：上浮 + 蓝色光晕 + 封面微缩放 */
+#recent-posts > .recent-post-item {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
 #recent-posts > .recent-post-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 26px rgba(232, 122, 154, 0.22);
-  transition: all 0.3s ease;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(64, 140, 210, 0.22);
+}
+#recent-posts > .recent-post-item .post_cover img,
+#recent-posts > .recent-post-item img.post_cover {
+  transition: transform 0.6s ease;
+}
+#recent-posts > .recent-post-item:hover img {
+  transform: scale(1.06);
 }
 
 /* 侧边栏卡片悬浮效果 */
+.card-widget {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .card-widget:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(232, 122, 154, 0.16);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 26px rgba(64, 140, 210, 0.16);
 }
 
-/* 页脚背景 */
+/* ---- 页脚：晴空渐变 + 顶部波浪 ---- */
 #footer {
   background: var(--footer-bg) !important;
+  position: relative;
+  margin-top: 40px;
+}
+#footer::before {
+  content: '';
+  position: absolute;
+  top: -38px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,60 L0,30 C240,58 480,4 720,26 C960,48 1200,18 1440,34 L1440,60 Z' fill='%2363b0f0'/%3E%3C/svg%3E") repeat-x;
+  background-size: cover;
+  pointer-events: none;
+}
+[data-theme="dark"] #footer::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0,60 L0,30 C240,58 480,4 720,26 C960,48 1200,18 1440,34 L1440,60 Z' fill='%231e1e1e'/%3E%3C/svg%3E") repeat-x;
+  background-size: cover;
 }
 
-/* 滚动条美化 */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
+/* ---- 滚动条 ---- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-thumb {
-  background: #f5a8c4;
+  background: #8ec9f7;
   border-radius: 4px;
 }
-
+::-webkit-scrollbar-thumb:hover { background: #5aaef2; }
 ::-webkit-scrollbar-track {
-  background: rgba(245, 168, 196, 0.12);
+  background: rgba(142, 201, 247, 0.12);
   border-radius: 4px;
 }
 
-/* 选中文字颜色 */
+/* ---- 选中文字 ---- */
 ::selection {
-  background: rgba(248, 165, 194, 0.55);
+  background: rgba(142, 201, 247, 0.55);
   color: #fff;
 }
 
-/* 页面加载淡入效果 */
+/* ---- 页面加载淡入 ---- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 文章图片圆角 */
-#article-container img {
-  border-radius: 8px;
-}
-
-/* 代码块美化 */
+/* ---- 文章内元素 ---- */
+#article-container img { border-radius: 12px; }
 #article-container code {
   padding: 2px 6px;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 0.9em;
 }
+#article-container blockquote { border-radius: 10px; }
 
-/* 标签云动画 */
-.tag-cloud-tags a {
-  transition: all 0.3s ease !important;
-}
-.tag-cloud-tags a:hover {
-  transform: scale(1.1) !important;
-}
+/* ---- 标签云动画 ---- */
+.tag-cloud-tags a { transition: all 0.3s ease !important; }
+.tag-cloud-tags a:hover { transform: scale(1.1) !important; }
 
-/* 底部回到顶部按钮 */
-#go-up {
-  background: #f28cb1 !important;
-}
+/* ---- 回到顶部 / 右下按钮组 ---- */
+#go-up { background: var(--accent) !important; }
+#rightside > div > button,
+#rightside #go-up { background: var(--accent) !important; }
 
-/* 禁止公告喇叭图标抖动 */
+/* ---- 禁止公告喇叭图标抖动 ---- */
 .announcement .item-headline i,
 .announcement i.fa-bullhorn,
 .card-announcement i.fa-bullhorn,
@@ -124,53 +156,33 @@ body {
   -webkit-animation: none !important;
 }
 
-/* 侧边栏标签 */
+/* ---- 侧边栏标签胶囊 ---- */
 .card-tag-cloud a {
   background: var(--tag-bg) !important;
   color: var(--tag-color) !important;
-  padding: 2px 8px !important;
-  border-radius: 4px !important;
+  padding: 2px 10px !important;
+  border-radius: 20px !important;
   margin: 2px !important;
-  opacity: 0.85 !important;
+  opacity: 0.88 !important;
+  box-shadow: 0 2px 8px rgba(74, 163, 239, 0.18);
 }
-.card-tag-cloud a:hover {
-  opacity: 1 !important;
-}
+.card-tag-cloud a:hover { opacity: 1 !important; }
 
-/* ===== 禁止头像旋转 ===== */
+/* ===== 保留：禁止头像旋转 ===== */
 .avatar-img img,
 .author-avatar img,
 .card-avatar img {
   transform: rotate(0deg) !important;
-  -webkit-transform: rotate(0deg) !important;
-  -moz-transform: rotate(0deg) !important;
-  -o-transform: rotate(0deg) !important;
-  -ms-transform: rotate(0deg) !important;
   transition: none !important;
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  -ms-transition: none !important;
 }
 .avatar-img img:hover,
 .author-avatar img:hover,
 .card-avatar img:hover {
   transform: rotate(0deg) !important;
-  -webkit-transform: rotate(0deg) !important;
-  -moz-transform: rotate(0deg) !important;
-  -o-transform: rotate(0deg) !important;
-  -ms-transform: rotate(0deg) !important;
   animation: none !important;
-  -webkit-animation: none !important;
 }
 
-/* ===== 禁止公告喇叭抖动 ===== */
-#aside-content .card-more-btn:hover {
-  animation: none !important;
-  -webkit-animation: none !important;
-}
-
-/* ===== 网站资讯修复 ===== */
+/* ===== 保留：网站资讯修复 ===== */
 .card-webinfo .webinfo .webinfo-item {
   display: flex;
   justify-content: space-between;
@@ -194,10 +206,10 @@ body {
 }
 
 /* ============================================================
-   二次元樱花主题增强（Sakura Night）
+   晴空 Sky · 二次元质感增强
    ============================================================ */
 
-/* 全站手写感字体：霞鹜文楷（CDN 分包加载） */
+/* 全站手写感字体：霞鹜文楷 */
 body,
 #site-info .site-title,
 #site-info .site-subtitle,
@@ -208,70 +220,138 @@ body,
   font-family: 'LXGW WenKai', 'LXGW WenKai Lite', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
 }
 
-/* 页面背景：淡樱底色 + 极淡樱花纹样平铺 */
-body {
-  background-color: var(--body-bg);
-  background-image: url('/img/bg-sakura.png');
-  background-repeat: repeat;
-}
-[data-theme="dark"] body {
-  background-image: none;
-}
-
-/* 顶图标题：柔和投影，二次元空气感 */
+/* ---- 首页 Hero：文字光晕 + 底部无缝过渡 ---- */
 #page-header.full_page #site-info .site-title {
-  text-shadow: 0 2px 14px rgba(150, 60, 110, 0.55), 0 0 2px rgba(150, 60, 110, 0.4);
+  letter-spacing: 3px;
+  text-shadow: 0 2px 18px rgba(30, 80, 140, 0.6), 0 0 2px rgba(30, 80, 140, 0.45);
 }
 #page-header.full_page #site-info .site-subtitle {
-  text-shadow: 0 1px 10px rgba(150, 60, 110, 0.5);
+  text-shadow: 0 1px 12px rgba(30, 80, 140, 0.55);
+}
+#page-header.full_page::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(227, 241, 253, 0) 0%, rgba(227, 241, 253, 0.85) 78%, #e3f1fd 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+#page-header.full_page #scroll-down {
+  z-index: 2;
 }
 #page-header.not-top-img {
-  background: linear-gradient(135deg, #f9c6da 0%, #d9b8ef 55%, #bcd4f7 100%);
-}
-#page-header.not-top-img #nav {
-  background: transparent !important;
+  background: linear-gradient(135deg, #9ccdf5 0%, #bcdcf8 55%, #e3f1fd 100%);
 }
 
-/* 头像卡片：樱花粉柔光描边（不旋转） */
+/* ---- 导航栏：毛玻璃 ---- */
+#nav {
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+}
+#nav.nav-fixed,
+#nav.visible {
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: 0 4px 20px rgba(64, 140, 210, 0.10);
+}
+[data-theme="dark"] #nav.nav-fixed,
+[data-theme="dark"] #nav.visible {
+  background: rgba(24, 26, 32, 0.82) !important;
+}
+
+/* ---- 作者卡片：天蓝渐变横幅 + 头像白环 ---- */
+#aside-content .card-info {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px !important;
+}
+#aside-content .card-info::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 92px;
+  background: linear-gradient(135deg, #7cc3f7 0%, #a9d8fa 55%, #d9edfd 100%);
+}
+#aside-content .card-info::after {
+  content: '';
+  position: absolute;
+  top: 58px; left: -20px;
+  width: 70px; height: 26px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  filter: blur(6px);
+}
 #aside-content .card-info .avatar-img {
-  border: 3px solid rgba(255, 178, 208, 0.7);
-  box-shadow: 0 0 0 5px rgba(255, 214, 232, 0.35), 0 6px 18px rgba(242, 140, 177, 0.28);
+  position: relative;
+  z-index: 1;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 4px rgba(142, 201, 247, 0.55), 0 8px 22px rgba(64, 140, 210, 0.30);
   border-radius: 50%;
 }
 
-/* 文章内代码与引用块的樱花化 */
-#article-container blockquote {
-  border-radius: 8px;
+/* ---- 右下角云朵吉祥物 ---- */
+#sky-mascot {
+  position: fixed;
+  left: 14px;
+  bottom: 10px;
+  z-index: 9997;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  pointer-events: none;
 }
-#article-container h1::before,
-#article-container h2::before {
-  color: #f28cb1;
+#sky-mascot .sky-bubble {
+  pointer-events: none;
+  max-width: 240px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(140, 195, 245, 0.5);
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #3d5a7d;
+  box-shadow: 0 6px 20px rgba(64, 140, 210, 0.16);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
-
-/* 标签页按钮hover */
-#pagination .page-number:hover,
-#pagination .extend:hover {
-  border-radius: 8px;
+#sky-mascot .sky-bubble.show {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-/* 看板娘（live2d）：小屏隐藏、体积收敛 */
-#waifu {
-  max-width: 220px !important;
+#sky-mascot .sky-cloud {
+  pointer-events: auto;
+  cursor: pointer;
+  margin-left: 6px;
+  filter: drop-shadow(0 6px 10px rgba(64, 140, 210, 0.25));
+  animation: skyBob 3.4s ease-in-out infinite;
+  transition: transform 0.2s ease;
 }
-#waifu-tips {
-  font-size: 12px !important;
+#sky-mascot .sky-cloud:hover { transform: scale(1.06); }
+#sky-mascot .sky-cloud.bounce { animation: skyBounce 0.55s ease; }
+@keyframes skyBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes skyBounce {
+  0% { transform: scale(1); }
+  35% { transform: scale(0.92) translateY(4px); }
+  70% { transform: scale(1.08) translateY(-8px); }
+  100% { transform: scale(1); }
+}
+#sky-mascot .sky-eyes {
+  animation: skyBlink 4.6s infinite;
+  transform-origin: center;
+}
+@keyframes skyBlink {
+  0%, 91%, 97%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.12); }
 }
 @media screen and (max-width: 768px) {
-  #waifu { display: none !important; }
+  #sky-mascot { display: none !important; }
 }
 
-/* 右下角按钮组统一粉色调 */
-#rightside > div > button,
-#rightside #go-up {
-  background: #f28cb1 !important;
-}
-
-/* 樱花飘落画布兜底隐藏（JS 加载失败时无影响） */
-#sakura-canvas {
-  display: block;
-}
+/* ---- 花瓣画布 ---- */
+#sakura-canvas { display: block; }

@@ -275,15 +275,15 @@ clickShowText:
   enable: true
   text:
     - ✿
-    - 🌸
-    - 喵~
+    - ✧
+    - ☁️
     - 加油鸭
-    - 可可爱爱
+    - 元气满满
     - 保持热爱
     - 持续进步
-    - 元气满满
-    - Sakura!
-    - ✧
+    - 起飞！
+    - Sunny!
+    - 好耶！
   fontSize: 18px
   random: true
   mobile: false
@@ -298,7 +298,7 @@ subtitle:
   sub:
     - 保持热爱，持续进步 ✿
     - 今天也要元气满满哦！٩(◕‿◕｡)۶
-    - 代码与樱花都很可爱 🌸
+    - 仰望蓝天，脚踏实地 ✈️
     - 学无止境，行以致远 📚
     - 行而不辍，未来可期 ✨
     - Hello World! 👋
@@ -379,34 +379,34 @@ beautify:
 # ========== 主题色（所有颜色值必须用双引号） ==========
 theme_color:
   enable: true
-  # 主色调 - 导航栏/链接/按钮/主要元素（樱花粉）
-  main: "#f28cb1"
+  # 主色调 - 导航栏/链接/按钮/主要元素（晴空蓝）
+  main: "#4aa3ef"
   # 分页器颜色 - 页码/翻页按钮
-  paginator: "#b892e0"
+  paginator: "#38b6c9"
   # 按钮悬停色 - 鼠标悬停时按钮颜色
-  button_hover: "#8fb7f0"
+  button_hover: "#7f8ff0"
   # 文字选中色 - 鼠标选中文字时的背景色
-  text_selection: "#f8a5c2"
+  text_selection: "#8ec9f7"
   # 链接颜色 - 普通链接文字颜色
-  link_color: "#e0779c"
+  link_color: "#2f7fd0"
   # 元数据颜色 - 日期/分类/标签等小字颜色
-  meta_color: "#9a8a95"
+  meta_color: "#7d8ba0"
   # 分隔线颜色 - 文章内水平线颜色
-  hr_color: "#ffd3e2"
+  hr_color: "#c9e5fa"
   # 代码前景色 - 行内代码文字颜色
-  code_foreground: "#e0567e"
+  code_foreground: "#ef7671"
   # 代码背景色 - 行内代码背景颜色
-  code_background: "rgba(244, 143, 177, .08)"
+  code_background: "rgba(74, 163, 239, .08)"
   # 目录颜色 - 侧边栏目录高亮色
-  toc_color: "#e0779c"
+  toc_color: "#2f7fd0"
   # 引用边条色 - 引用块左侧竖条颜色
-  blockquote_padding_color: "#f28cb1"
+  blockquote_padding_color: "#4aa3ef"
   # 引用背景色 - 引用块背景颜色
-  blockquote_background_color: "#fdf0f5"
+  blockquote_background_color: "#f0f7fe"
   # 滚动条颜色
-  scrollbar_color: "#f5a8c4"
+  scrollbar_color: "#8ec9f7"
   # 浏览器主题色（亮色模式）
-  meta_theme_color_light: "#fdf3f7"
+  meta_theme_color_light: "#f2f9ff"
   # 浏览器主题色（暗色模式）
   meta_theme_color_dark: "#0d0d0d"
 
