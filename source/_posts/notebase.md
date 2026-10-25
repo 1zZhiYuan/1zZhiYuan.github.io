@@ -1,6 +1,6 @@
 ---
 title: 项目分享：NoteBase —— 一款完全本地的笔记应用
-date: 2026-10-25 20:00:00
+date: 2026-10-25 16:00:00
 tags: [项目, Python, PyQt5, 桌面开发]
 categories: [项目]
 cover: /img/notebase/cover-notebase.jpg
