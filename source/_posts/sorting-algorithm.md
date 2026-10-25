@@ -4,6 +4,7 @@ date: 2024-08-10 20:00:00
 tags: [算法, Python, 数据结构]
 categories: [技术]
 cover: /img/covers/sorting-algorithm.jpg
+top_img: /img/top-tag.jpg
 ---
 
 排序算法是计算机科学中最基础的算法之一。这篇文章用 Python 实现几种经典排序算法，并配上可视化思路。

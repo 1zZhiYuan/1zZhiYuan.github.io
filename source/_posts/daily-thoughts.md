@@ -4,6 +4,7 @@ date: 2026-04-25 22:30:00
 tags: [随笔, 生活]
 categories: [生活]
 cover: /img/covers/daily-thoughts.jpg
+top_img: /img/top-tag.jpg
 ---
 
 ## 📝 一些近况

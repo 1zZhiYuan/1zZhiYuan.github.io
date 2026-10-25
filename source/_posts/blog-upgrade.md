@@ -4,6 +4,7 @@ date: 2026-05-01 10:00:00
 tags: [博客, 折腾]
 categories: [技术]
 cover: /img/covers/blog-upgrade.jpg
+top_img: /img/top-archive.jpg
 ---
 
 经过一段时间的折腾，我的博客迎来了全面升级！这次换上了 **Hexo Butterfly 主题**，功能和颜值都上了一个台阶。

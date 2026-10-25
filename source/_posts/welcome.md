@@ -4,6 +4,7 @@ date: 2023-05-25 22:00:00
 tags: [随笔, 生活]
 categories: [生活]
 cover: /img/covers/welcome.jpg
+top_img: /img/top-home.jpg
 ---
 
 ## 🎉 你好，欢迎光临！

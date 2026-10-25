@@ -4,7 +4,7 @@ date: 2026-05-02 23:00:00
 tags: [项目, Python, PyQt6, 桌面开发]
 categories: [项目]
 cover: /img/covers/timer-project.jpg
-top_img: /img/default.jpg
+top_img: /img/top-home.jpg
 description: 一款使用 Python + PyQt6 开发的 Windows 桌面端专注计时与学习统计工具，纯本地运行，功能完整。
 ---
 

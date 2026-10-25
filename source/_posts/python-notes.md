@@ -4,6 +4,7 @@ date: 2025-08-15 14:30:00
 tags: [Python, 学习笔记]
 categories: [技术]
 cover: /img/covers/python-notes.jpg
+top_img: /img/top-category.jpg
 ---
 
 Python 是我最喜欢的编程语言之一。这篇笔记整理了入门 Python 的核心知识点，适合初学者参考。

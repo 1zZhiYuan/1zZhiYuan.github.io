@@ -4,12 +4,12 @@
 /* ---- 可自定义颜色 ---- */
 :root {
   --card-bg: #fff;              /* 卡片背景色（亮色模式） */
-  --card-border: rgba(0,0,0,.06); /* 卡片边框色 */
-  --body-bg: #f5f5f5;           /* 页面背景色 */
-  --footer-bg: #49b1f5;         /* 页脚背景色 */
-  --tag-bg: #49b1f5;            /* 标签背景色 */
+  --card-border: rgba(0,0,0,.05); /* 卡片边框色 */
+  --body-bg: #fdf5f8;           /* 页面背景色 */
+  --footer-bg: #f28cb1;         /* 页脚背景色 */
+  --tag-bg: #f28cb1;            /* 标签背景色 */
   --tag-color: #fff;            /* 标签文字色 */
-  --category-bg: #49b1f5;       /* 分类背景色 */
+  --category-bg: #b892e0;       /* 分类背景色 */
   --category-color: #fff;       /* 分类文字色 */
 }
 
@@ -29,7 +29,7 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
-/* 卡片 */
+/* 卡片（二次元樱花质感：大圆角 + 柔粉投影） */
 .card-widget,
 #recent-posts > .recent-post-item,
 #page,
@@ -39,20 +39,21 @@ body {
 #category {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(242, 140, 177, 0.10);
 }
 
 /* 文章卡片悬浮效果 */
 #recent-posts > .recent-post-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 26px rgba(232, 122, 154, 0.22);
   transition: all 0.3s ease;
 }
 
 /* 侧边栏卡片悬浮效果 */
 .card-widget:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(232, 122, 154, 0.16);
   transition: all 0.3s ease;
 }
 
@@ -68,18 +69,18 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #49b1f5;
+  background: #f5a8c4;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(73, 177, 245, 0.1);
+  background: rgba(245, 168, 196, 0.12);
   border-radius: 4px;
 }
 
 /* 选中文字颜色 */
 ::selection {
-  background: #00c4b6;
+  background: rgba(248, 165, 194, 0.55);
   color: #fff;
 }
 
@@ -111,7 +112,7 @@ body {
 
 /* 底部回到顶部按钮 */
 #go-up {
-  background: #49b1f5 !important;
+  background: #f28cb1 !important;
 }
 
 /* 禁止公告喇叭图标抖动 */
@@ -186,8 +187,91 @@ body {
   text-align: right;
   flex-shrink: 0;
 }
-.card-webinfo .webinfo #runtimeshow {
+.card-webinfo .webinfo .webinfo-item #runtimeshow {
   display: inline-block;
   text-align: right;
   font-size: 0.9em;
+}
+
+/* ============================================================
+   二次元樱花主题增强（Sakura Night）
+   ============================================================ */
+
+/* 全站手写感字体：霞鹜文楷（CDN 分包加载） */
+body,
+#site-info .site-title,
+#site-info .site-subtitle,
+#nav,
+#footer,
+.layout-title,
+.recent-post-title {
+  font-family: 'LXGW WenKai', 'LXGW WenKai Lite', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+}
+
+/* 页面背景：淡樱底色 + 极淡樱花纹样平铺 */
+body {
+  background-color: var(--body-bg);
+  background-image: url('/img/bg-sakura.png');
+  background-repeat: repeat;
+}
+[data-theme="dark"] body {
+  background-image: none;
+}
+
+/* 顶图标题：柔和投影，二次元空气感 */
+#page-header.full_page #site-info .site-title {
+  text-shadow: 0 2px 14px rgba(150, 60, 110, 0.55), 0 0 2px rgba(150, 60, 110, 0.4);
+}
+#page-header.full_page #site-info .site-subtitle {
+  text-shadow: 0 1px 10px rgba(150, 60, 110, 0.5);
+}
+#page-header.not-top-img {
+  background: linear-gradient(135deg, #f9c6da 0%, #d9b8ef 55%, #bcd4f7 100%);
+}
+#page-header.not-top-img #nav {
+  background: transparent !important;
+}
+
+/* 头像卡片：樱花粉柔光描边（不旋转） */
+#aside-content .card-info .avatar-img {
+  border: 3px solid rgba(255, 178, 208, 0.7);
+  box-shadow: 0 0 0 5px rgba(255, 214, 232, 0.35), 0 6px 18px rgba(242, 140, 177, 0.28);
+  border-radius: 50%;
+}
+
+/* 文章内代码与引用块的樱花化 */
+#article-container blockquote {
+  border-radius: 8px;
+}
+#article-container h1::before,
+#article-container h2::before {
+  color: #f28cb1;
+}
+
+/* 标签页按钮hover */
+#pagination .page-number:hover,
+#pagination .extend:hover {
+  border-radius: 8px;
+}
+
+/* 看板娘（live2d）：小屏隐藏、体积收敛 */
+#waifu {
+  max-width: 220px !important;
+}
+#waifu-tips {
+  font-size: 12px !important;
+}
+@media screen and (max-width: 768px) {
+  #waifu { display: none !important; }
+}
+
+/* 右下角按钮组统一粉色调 */
+#rightside > div > button,
+#rightside #go-up {
+  background: #f28cb1 !important;
+}
+
+/* 樱花飘落画布兜底隐藏（JS 加载失败时无影响） */
+#sakura-canvas {
+  display: block;
 }
